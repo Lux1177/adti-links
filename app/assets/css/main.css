@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 240 10% 98%;
+        --foreground: 240 10% 10%;
+        --card: 0 0% 100%;
+        --card-foreground: 240 10% 10%;
+        --primary: 262 83% 58%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 240 5% 96%;
+        --secondary-foreground: 240 10% 10%;
+        --muted: 240 5% 96%;
+        --muted-foreground: 240 4% 46%;
+        --accent: 262 83% 58%;
+        --accent-foreground: 0 0% 100%;
+        --border: 240 6% 90%;
+        --ring: 262 83% 58%;
+        --radius: 1rem;
+    }
+
+    .dark {
+        --background: 240 10% 8%;
+        --foreground: 240 5% 96%;
+        --card: 240 10% 12%;
+        --card-foreground: 240 5% 96%;
+        --primary: 262 83% 58%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 240 4% 16%;
+        --secondary-foreground: 240 5% 96%;
+        --muted: 240 4% 16%;
+        --muted-foreground: 240 5% 65%;
+        --accent: 262 83% 58%;
+        --accent-foreground: 0 0% 100%;
+        --border: 240 4% 20%;
+        --ring: 262 83% 58%;
+    }
+
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground font-sans antialiased;
+    }
+}
+
+@layer utilities {
+    /* Animated gradient background */
+    .gradient-bg {
+        background: linear-gradient(135deg, hsl(262, 83%, 95%) 0%, hsl(240, 100%, 98%) 50%, hsl(280, 70%, 96%) 100%);
+        background-size: 200% 200%;
+        animation: gradientShift 15s ease infinite;
+    }
+
+    .dark .gradient-bg {
+        background: linear-gradient(135deg, hsl(262, 40%, 12%) 0%, hsl(240, 30%, 8%) 50%, hsl(280, 35%, 10%) 100%);
+        background-size: 200% 200%;
+    }
+
+    @keyframes gradientShift {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    /* Glassmorphism effect */
+    .glass {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .dark .glass {
+        background: rgba(30, 30, 40, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
