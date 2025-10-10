@@ -6,20 +6,51 @@ export default defineNuxtConfig({
 				css: ["~/assets/css/main.css"],
 				app: {
 								head: {
-												title: "Link in Bio",
-												meta: [
-																{ charset: "utf-8" },
-																{ name: "viewport", content: "width=device-width, initial-scale=1" },
-																{ name: "description", content: "My personal link in bio page" },
-												],
-												link: [
-																{ rel: "preconnect", href: "https://fonts.googleapis.com" },
-																{ rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" },
-																{
-																				rel: "stylesheet",
-																				href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap",
-																},
-												],
+									title: 'Foydali linklar – my.agmi.uz',
+									htmlAttrs: {
+										lang: 'uz',
+									},
+									meta: [
+										{charset: 'utf-8'},
+										{name: 'viewport', content: 'width=device-width, initial-scale=1'},
+										{
+											name: 'description',
+											content:
+													'Talabalar uchun foydali linklar – my.agmi.uz sayti orqali ta’lim jarayonida kerakli havolalar, xizmatlar va platformalar bir joyda.',
+										},
+										{name: 'theme-color', content: '#f5f6ff'},
+
+										// Open Graph
+										{property: 'og:title', content: 'Foydali linklar – my.agmi.uz'},
+										{
+											property: 'og:description',
+											content:
+													'Talabalar uchun eng qulay platforma – barcha foydali linklar va xizmatlar bir sahifada.',
+										},
+										{property: 'og:type', content: 'website'},
+										{property: 'og:url', content: 'https://my.agmi.uz'},
+										{property: 'og:image', content: '/og-image.jpg'}, // создай этот файл в /public
+
+										// Twitter Card
+										{name: 'twitter:card', content: 'summary_large_image'},
+										{name: 'twitter:title', content: 'Foydali linklar – my.agmi.uz'},
+										{
+											name: 'twitter:description',
+											content:
+													'Talabalar uchun eng qulay platforma – barcha foydali linklar va xizmatlar bir sahifada.',
+										},
+										{name: 'twitter:image', content: '/og-image.jpg'},
+									],
+									link: [
+										{rel: 'icon', type: 'image/png', href: '/favicon.png'},
+										{rel: 'apple-touch-icon', href: '/apple-touch-icon.png'},
+										{rel: "preconnect", href: "https://fonts.googleapis.com"},
+										{rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: ""},
+										{
+											rel: "stylesheet",
+											href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap",
+										},
+									],
 								},
 				},
 })
