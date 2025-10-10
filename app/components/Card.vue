@@ -1,22 +1,31 @@
 <template>
 	<NuxtLink
-		:to="link"
-		class="block bg-white rounded-3xl text-center transition duration-200 hover:-translate-y-1"
+		:to="url" target="_blank"
+		class="block bg-white rounded-3xl text-center cursor-pointer transition-transform duration-300 hover:-translate-y-1.5 hover:shadow-[0_6px_0_#ddd6ff]"
 	>
-		<div class="flex flex-col items-center p-7 pb-8">
+		<div class="flex flex-col items-center p-7 pb-8 relative overflow-hidden group">
+			<!-- Фон при наведении -->
+			<div
+				class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-t from-[#f7f5ff] to-transparent"
+			></div>
+
+			<!-- Изображение -->
 			<img
 				:src="image"
 				:alt="title"
-				class="w-28 h-28 object-contain mb-5 select-none"
+				class="w-28 h-28 object-contain mb-4 select-none transition-all duration-300 group-hover:drop-shadow-[0_4px_6px_rgba(48,44,128,0.25)]"
 			/>
 
+			<!-- Заголовок -->
 			<h3 class="text-2xl font-semibold mb-4" :style="{ color: '#302C80' }">
 				{{ title }}
 			</h3>
 
+			<!-- Разделитель -->
 			<div class="w-full h-px mb-4 fade-line"></div>
 
-			<p class="text-base leading-snug" :style="{ color: '#545569' }">
+			<!-- Описание -->
+			<p class="text-base leading-snug z-10" :style="{ color: '#545569' }">
 				{{ description }}
 			</p>
 		</div>
@@ -28,22 +37,18 @@ defineProps({
 	image: String,
 	title: String,
 	description: String,
-	link: String,
+	url: String,
 })
+
 </script>
 
 <style scoped>
+/* тень под карточкой */
 a {
-	position: relative;
 	box-shadow: 0 4px 0px #ddd6ff;
-	transition: transform 0.25s ease;
 }
 
-a:hover {
-	transform: translateY(-5px);
-}
-
-/* градиентная разделительная линия */
+/* градиентная линия между текстами */
 .fade-line {
 	background: linear-gradient(
 		to right,
