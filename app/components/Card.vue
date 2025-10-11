@@ -1,5 +1,10 @@
 <template>
 	<NuxtLink
+		:style="{
+      opacity: isVisible ? 1 : 0,
+      transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
+      transition: `all 0.6s cubic-bezier(0.4, 0, 0.2, 1) ${delay}ms`
+    }"
 		:to="url" target="_blank"
 		class="block bg-white rounded-3xl text-center cursor-pointer transition-transform duration-300 hover:-translate-y-1.5 hover:shadow-[0_6px_0_#ddd6ff]"
 	>
@@ -38,6 +43,15 @@ defineProps({
 	title: String,
 	description: String,
 	url: String,
+	delay: Number
+})
+
+const isVisible = ref(false)
+
+onMounted(() => {
+	setTimeout(() => {
+		isVisible.value = true
+	}, 50)
 })
 
 </script>
