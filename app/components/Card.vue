@@ -3,7 +3,7 @@
 		:to="url" target="_blank"
 		class="block bg-white rounded-3xl text-center cursor-pointer transition-transform duration-300 hover:-translate-y-1.5 hover:shadow-[0_6px_0_#ddd6ff]"
 	>
-		<div class="flex flex-col items-center p-7 pb-8 relative overflow-hidden group">
+		<div class="flex flex-col items-center p-7 pb-8 relative overflow-hidden group h-full">
 			<!-- Фон при наведении -->
 			<div
 				class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-t from-[#f7f5ff] to-transparent"
