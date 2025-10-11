@@ -18,7 +18,7 @@
 			<img
 				:src="image"
 				:alt="title"
-				class="w-28 h-28 object-contain mb-4 select-none transition-all duration-300 group-hover:drop-shadow-[0_4px_6px_rgba(48,44,128,0.25)]"
+				class="w-28 h-28 object-contain mb-4 select-none transition-all duration-300 ease-out group-hover:scale-110"
 			/>
 
 			<!-- Заголовок -->
