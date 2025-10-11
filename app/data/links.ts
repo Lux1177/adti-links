@@ -4,13 +4,13 @@ export const LINKS: Link[] = [
 
 	{
 		title: 'adti.uz',
-		description: "Ideal rezyumesini yaratmoqchi bo'lgan talaba. Kelajakni birga yaratamiz!",
+		description: "Andijon davlat tibbiyot instituti rasmiy veb-sayti",
 		url: 'https://adti.uz/',
 		image: '/adti.uz.png'
 	},
 	{
 		title: '@asmimed',
-		description: "Talabalar to'lov, ijara va shunga o'xshash shartnomalarga ariza berish uchun",
+		description: "Andijon davlat tibbiyot instituti Registrator ofisi rasmiy telegram kanali",
 		url: 'https://t.me/asmimed',
 		image: '/tg.png'
 	},
@@ -28,13 +28,13 @@ export const LINKS: Link[] = [
 	},
 	{
 		title: 'edu.uz',
-		description: "Ideal rezyumesini yaratmoqchi bo'lgan talaba. Kelajakni birga yaratamiz!",
+		description: "O‘zbekiston Respublikasi Oliy taʼlim, fan va innovatsiyalar vazirligi",
 		url: 'https://gov.uz/oz/edu',
 		image: '/edu.uz.png'
 	},
 	{
 		title: 'ssv.uz',
-		description: "Talabalar to'lov, ijara va shunga o'xshash shartnomalarga ariza berish uchun",
+		description: "O‘zbеkistоn Rеspublikаsi Sоg‘liqni saqlash vаzirligi",
 		url: 'https://gov.uz/oz/ssv',
 		image: '/ssv.uz.png'
 	},
