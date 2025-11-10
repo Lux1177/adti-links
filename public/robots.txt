@@ -1,2 +1,5 @@
-User-Agent: *
-Disallow:
+User-agent: *
+Allow: /
+
+Sitemap: https://adti-links.vercel.app/sitemap.xml
+Host: https://adti-links.vercel.app
