@@ -11,7 +11,7 @@ export default defineNuxtConfig({
 										lang: 'uz',
 									},
 									meta: [
-										{ name: 'robots', content: 'index, follow' },
+										{name: 'robots', content: 'index, follow'},
 										{charset: 'utf-8'},
 										{name: 'viewport', content: 'width=device-width, initial-scale=1'},
 										{
@@ -41,6 +41,9 @@ export default defineNuxtConfig({
 													'Talabalar uchun eng qulay platforma – barcha foydali linklar va xizmatlar bir sahifada.',
 										},
 										{name: 'twitter:image', content: '/og-image.jpg'},
+										{name: "yandex-verification", content: "3c1dc45ebbf29326"},
+
+										{name: "google-site-verification",content: "QzkV-0JihAL8jS-KljU0r02V_ZTewDb03nO9kP2MNGQ"}
 									],
 									link: [
 										{rel: 'canonical', href: 'https://adti-links.vercel.app/'},
